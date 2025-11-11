@@ -80,12 +80,12 @@
         layer0 {
             bindings = <
 &mt LEFT_ALT Q  &kp W  &kp E      &kp R        &kp T                                              &kp Y      &kp U  &kp I      &kp O      &kp P
-&kp A           &kp S  &kp D      &kp F        &kp G         &kp LS(LG(S))       &kp QUESTION     &kp H      &kp J  &kp K      &kp L      &kp ENTER
+&kp A           &kp S  &kp D      &kp F        &kp G         &mkp MB1            &kp QUESTION     &kp H      &kp J  &kp K      &kp L      &kp ENTER
 &kp Z           &kp X  &kp C      &kp V        &kp B         &kp LEFT_SHIFT      &kp EXCLAMATION  &kp N      &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
 &kp LEFT_SHIFT  &mo 4  &kp RCTRL  &lt 3 COMMA  &lt 2 PERIOD  &lt 1 LANG2         &mt LCMD LANG1   &kp SPACE                               &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp SLASH MINUS>;
         };
 
         layer1 {
@@ -99,10 +99,10 @@
 
         layer2 {
             bindings = <
-&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                          &kp HOME      &kp UP        &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
-&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &trans  &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
-&trans        &trans        &trans        &trans        &trans         &trans      &trans  &trans                                                           &kp LG(LA(V))
+&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp HOME      &kp UP        &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
+&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT      &kp DOWN      &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &trans        &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
+&trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &trans                                                           &kp LG(LA(V))
             >;
         };
 
