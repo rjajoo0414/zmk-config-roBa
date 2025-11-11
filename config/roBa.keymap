@@ -88,16 +88,18 @@
             sensor-bindings = <&inc_dec_kp SLASH MINUS>;
         };
 
-        layer1 {
+        symbol_mac+ipad {
             bindings = <
 &kp ESCAPE   &kp DOLLAR         &kp AMPERSAND  &kp CARET        &kp SLASH                            &kp INT_YEN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
 &kp AT_SIGN  &kp HASH           &kp ASTERISK   &kp QUESTION     &kp PAGE_UP    &trans      &trans    &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mkp MB1       &mkp MB2
 &kp TILDE    &kp DOUBLE_QUOTES  &kp SQT        &kp EXCLAMATION  &kp PAGE_DOWN  &trans      &trans    &kp PIPE     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &kp COLON
 &kp LCTRL    &kp GRAVE          &kp LCTRL      &trans           &trans         &trans      &kp LCMD  &kp LS(TAB)                                                              &kp TAB
             >;
+
+            sensor-bindings = <&inc_dec_kp SLASH MINUS>;
         };
 
-        layer2 {
+        num_mac+ipad {
             bindings = <
 &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp HOME        &kp UP        &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
 &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN      &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
@@ -106,7 +108,7 @@
             >;
         };
 
-        layer3 {
+        function_mac+ipad {
             bindings = <
 &kp LC(E)       &kp F7      &kp F8            &kp F9  &kp F10                            &kp LEFT              &kp TAB               &kp RIGHT   &kp DOWN  &kp ENTER
 &kp LC(A)       &kp F4      &kp F5            &kp F6  &kp F11  &trans      &trans        &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &mkp MB1  &mkp MB2
