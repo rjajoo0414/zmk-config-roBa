@@ -90,8 +90,8 @@
 
         symbol_mac+ipad {
             bindings = <
-&kp ESCAPE   &kp DOLLAR         &kp AMPERSAND  &kp CARET        &kp SLASH                            &kp INT_YEN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
-&kp AT_SIGN  &kp HASH           &kp ASTERISK   &kp QUESTION     &kp PAGE_UP    &trans      &trans    &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mkp MB1       &mkp MB2
+&kp ESCAPE   &kp ASTRK          &kp AMPERSAND  &kp CARET        &kp SLASH                            &kp INT_YEN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN
+&kp AT_SIGN  &kp HASH           &kp DOLLAR     &kp QUESTION     &kp PAGE_UP    &trans      &trans    &kp PERCENT  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &mkp MB1       &mkp MB2
 &kp TILDE    &kp DOUBLE_QUOTES  &kp SQT        &kp EXCLAMATION  &kp PAGE_DOWN  &trans      &trans    &kp PIPE     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SEMICOLON  &kp COLON
 &kp LCTRL    &kp GRAVE          &kp LCTRL      &trans           &trans         &trans      &kp LCMD  &kp LS(TAB)                                                              &kp TAB
             >;
