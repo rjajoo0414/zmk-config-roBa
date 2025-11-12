@@ -121,10 +121,10 @@
 
         layer4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &trans  &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp K_SLEEP  &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                            &trans
+&trans  &trans  &trans  &trans  &trans                             &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LG(Q))  &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                            &trans
             >;
         };
 
