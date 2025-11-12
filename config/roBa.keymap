@@ -39,7 +39,7 @@
         };
 
         muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
+            bindings = <&bt0 INT_MUHENKAN>;
             key-positions = <11 10>;
         };
 
@@ -67,11 +67,28 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+        bt0: to_layer_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
+
             label = "TO_LAYER_0";
+        };
+
+        bt2: bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&macro_wait_time 200>, <&to 4>;
+
+            label = "BT2";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&macro_wait_time 200>, <&to 0>;
+
+            label = "BT1";
         };
     };
 
@@ -79,7 +96,7 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            bindings = <&mo>, <&bt0>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -139,7 +156,7 @@
 &kp LEFT_SHIFT  &kp LEFT_WIN  &kp RIGHT_ALT  &lt 7 COMMA  &lt 6 PERIOD  &lt 5 LANG2         &mt RCTRL LANG1  &kp SPACE                               &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp SLASH MINUS>;
+            sensor-bindings = <&inc_dec_kp RC(PAGE_UP) RC(PAGE_DOWN)>;
         };
 
         symbol_windows {
@@ -175,10 +192,10 @@
 
         bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                             &trans  &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LG(Q))  &trans  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                            &trans
+&trans  &trans  &trans  &trans  &trans                             &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LG(Q))  &trans  &bt BT_SEL 3  &bt2    &bt1    &bt0
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                &trans
             >;
         };
     };
