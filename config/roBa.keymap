@@ -90,6 +90,19 @@
 
             label = "BT1";
         };
+
+        sleep_windows: sleep_windows {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LG(X)>,
+                <&macro_wait_time 200>,
+                <&kp U>,
+                <&macro_wait_time 200>,
+                <&kp S>;
+
+            label = "SLEEP_WINDOWS";
+        };
     };
 
     behaviors {
@@ -201,10 +214,10 @@
 
         bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                             &trans  &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LG(Q))  &trans  &bt BT_SEL 3  &bt2    &bt1    &bt0
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans        &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                              &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(LG(Q))   &trans  &bt BT_SEL 3  &bt2    &bt1    &bt0
+&trans  &trans  &trans  &trans  &trans  &trans      &sleep_windows  &trans  &trans        &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans          &trans                                &trans
             >;
         };
     };
