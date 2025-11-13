@@ -143,10 +143,10 @@
 
         num_mac+ipad {
             bindings = <
-&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp HOME        &kp UP        &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
-&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN      &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &trans        &kp LC(LEFT)    &kp LC(DOWN)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
-&trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                     &kp LG(LA(V))
+&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp HOME        &kp UP            &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
+&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN          &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &trans        &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
+&trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                         &kp LG(LA(V))
             >;
         };
 
