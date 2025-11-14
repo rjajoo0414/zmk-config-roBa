@@ -121,10 +121,10 @@
 
         default_mac+ipad {
             bindings = <
-&kp Q           &kp W         &kp E      &kp R             &kp T                                                   &kp Y               &kp U  &kp I      &kp O      &kp P
-&kp A           &kp S         &kp D      &kp F             &kp G        &mkp MB1            &kp EXCLAMATION        &kp H               &kp J  &kp K      &kp L      &kp ENTER
-&kp Z           &kp X         &kp C      &lt 8 V           &lt 9 B      &kp LEFT_SHIFT      &mt LEFT_WIN QUESTION  &kp N               &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LEFT_ALT  &kp RCTRL  &lt 1 LANGUAGE_2  &lt 3 COMMA  &lt 2 PERIOD        &mt LCMD SPACE         &mt CAPSLOCK LANG1                               &kp DEL
+&kp Q           &kp W         &kp E      &kp R        &kp T                                                        &kp Y               &kp U  &kp I      &kp O      &kp P
+&kp A           &kp S         &kp D      &kp F        &kp G             &mkp MB1            &kp EXCLAMATION        &kp H               &kp J  &kp K      &kp L      &kp ENTER
+&kp Z           &kp X         &kp C      &lt 8 V      &lt 9 B           &kp LEFT_SHIFT      &mt LEFT_WIN QUESTION  &kp N               &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp RCTRL  &lt 1 COMMA  &lt 3 LANGUAGE_2  &lt 2 PERIOD        &mt LCMD SPACE         &mt CAPSLOCK LANG1                               &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp SLASH MINUS>;
