@@ -116,11 +116,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
     };
@@ -132,9 +134,10 @@
             bindings = <
 &kp Q           &kp W         &kp E      &kp R        &kp T                                                        &kp Y               &kp U  &kp I      &kp O      &kp P
 &kp A           &kp S         &kp D      &kp F        &kp G             &mkp MB1            &kp EXCLAMATION        &kp H               &kp J  &kp K      &kp L      &kp ENTER
-&kp Z           &kp X         &kp C      &lt 8 V      &lt 9 B           &kp LEFT_SHIFT      &mt LEFT_WIN QUESTION  &kp N               &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
+&kp Z           &kp X         &kp C      &kp V        &lt 8 B           &kp LEFT_SHIFT      &mt LEFT_WIN QUESTION  &kp N               &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
 &kp LEFT_SHIFT  &kp LEFT_ALT  &kp RCTRL  &lt 1 COMMA  &lt 3 LANGUAGE_2  &lt 2 PERIOD        &mt LCMD SPACE         &mt CAPSLOCK LANG1                               &kp DEL
             >;
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
@@ -171,13 +174,13 @@
 
         default_windows {
             bindings = <
-&kp Q           &kp W         &kp E          &kp R        &kp T                                              &kp Y      &kp U  &kp I      &kp O      &kp P
-&kp A           &kp S         &kp D          &kp F        &kp G         &mkp MB1            &kp QUESTION     &kp H      &kp J  &kp K      &kp L      &kp ENTER
-&kp Z           &kp X         &kp C          &lt 8 V      &lt 9 B       &kp LEFT_SHIFT      &kp EXCLAMATION  &kp N      &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp RIGHT_ALT  &lt 7 COMMA  &lt 6 PERIOD  &lt 5 LANG2         &mt RCTRL LANG1  &kp SPACE                               &kp DEL
+&kp Q           &kp W         &kp E          &kp R        &kp T                                                   &kp Y      &kp U  &kp I      &kp O      &kp P
+&kp A           &kp S         &kp D          &kp F        &kp G        &mkp MB1            &kp QUESTION           &kp H      &kp J  &kp K      &kp L      &kp ENTER
+&kp Z           &kp X         &kp C          &kp V        &lt 8 B      &kp LEFT_SHIFT      &mt RCTRL EXCLAMATION  &kp N      &kp M  &kp SLASH  &kp MINUS  &kp BACKSPACE
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp RIGHT_ALT  &lt 5 COMMA  &lt 7 LANG2  &lt 6 PERIOD        &mt RCTRL SPACE        &kp LANG1                               &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp RC(PAGE_UP) RC(PAGE_DOWN)>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         symbol_windows {
@@ -202,22 +205,13 @@
 
         function_windows {
             bindings = <
-&kp END         &kp F7      &kp F8            &kp F9  &kp F10                         &kp LEFT              &kp TAB               &kp RIGHT   &kp LG(LS(LEFT))  &kp LS(LG(RIGHT))
-&kp LC(HOME)    &kp F4      &kp F5            &kp F6  &kp F11  &trans      &trans     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE  &mkp MB1          &mkp MB2
-&kp LG(H)       &kp F1      &kp F2            &kp F3  &kp F12  &trans      &trans     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans      &mkp MB4          &mkp MB5
-&kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE  &trans  &trans   &trans      &kp LCTRL  &kp LEFT_ALT                                                              &trans
+&kp END         &kp F7      &kp F8            &kp F9  &kp F10                         &kp LEFT              &kp TAB               &kp RIGHT         &kp LG(LS(LEFT))  &kp LS(LG(RIGHT))
+&kp LC(HOME)    &kp F4      &kp F5            &kp F6  &kp F11  &trans      &trans     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE        &mkp MB1          &mkp MB2
+&kp LG(H)       &kp F1      &kp F2            &kp F3  &kp F12  &trans      &trans     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp RC(RS(PLUS))  &mkp MB4          &mkp MB5
+&kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE  &trans  &trans   &trans      &kp LCTRL  &kp LEFT_ALT                                                                    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-        };
-
-        scroll {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
         };
 
         bluetooth {
