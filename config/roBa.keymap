@@ -119,6 +119,20 @@
             bindings = <&kp CAPSLOCK &kp UP_ARROW>;
             label = "APPSWITCHER";
         };
+
+        right: right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS &kp RIGHT>;
+            label = "RIGHT";
+        };
+
+        left: left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPSLOCK &kp LEFT>;
+            label = "LEFT";
+        };
     };
 
     behaviors {
@@ -212,7 +226,7 @@
             bindings = <
 &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp LG(LEFT)    &kp UP        &kp LG(RIGHT)  &kp LS(LG(NUMBER_3))  &kp LG(X)
 &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN      &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp CAPS      &kp LG(TAB)     &appswitcher  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp CAPS      &left           &appswitcher  &right         &kp LS(LG(NUMBER_5))  &kp LG(V)
 &trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                     &kp LG(LA(V))
             >;
         };
