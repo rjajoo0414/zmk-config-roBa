@@ -266,10 +266,10 @@
 
         num_windows {
             bindings = <
-&kp LS(SEMICOLON)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(MINUS)                                   &kp HOME          &kp UP    &kp END            &kp PRINTSCREEN  &kp RC(X)
-&kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans               &kp LEFT          &kp DOWN  &kp RIGHT          &kp LS(LG(S))    &kp RC(C)
-&kp NUMBER_0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp RC(RIGHT_SHIFT)  &kp LA(LG(LEFT))  &kp TAB   &kp LA(LG(RIGHT))  &kp LC(ESC)      &kp RC(V)
-&trans             &trans        &trans        &trans        &trans         &trans      &kp LCTRL            &kp LEFT_SHIFT                                                  &kp LG(V)
+&kp LS(SEMICOLON)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(MINUS)                           &kp HOME          &kp UP    &kp END            &kp PRINTSCREEN  &kp RC(X)
+&kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans       &kp LEFT          &kp DOWN  &kp RIGHT          &kp LS(LG(S))    &kp RC(C)
+&kp NUMBER_0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp LG(TAB)  &kp LA(LG(LEFT))  &kp TAB   &kp LA(LG(RIGHT))  &kp LC(ESC)      &kp RC(V)
+&trans             &trans        &trans        &trans        &trans         &trans      &kp LCTRL    &kp LEFT_SHIFT                                                  &kp LG(V)
             >;
         };
 
