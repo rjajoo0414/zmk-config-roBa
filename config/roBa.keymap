@@ -108,6 +108,34 @@
             bindings = <&kp CAPSLOCK &kp LEFT>;
             label = "LEFT";
         };
+
+        ipad_left: ipad_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp CAPS>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LCTRL &kp CAPS>;
+
+            label = "IPAD_LEFT";
+        };
+
+        ipad_right: ipad_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp CAPS>,
+                <&macro_tap>,
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL &kp CAPS>;
+
+            label = "IPAD_RIGHT";
+        };
     };
 
     behaviors {
@@ -160,7 +188,7 @@
 &kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp HOME        &kp UP            &kp END        &kp LS(LG(NUMBER_3))  &kp LG(X)
 &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN          &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &trans        &kp LC(LEFT)    &kp LC(UP_ARROW)  &kp LC(RIGHT)  &kp LS(LG(NUMBER_5))  &kp LG(V)
-&trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                         &kp LG(LA(V))
+&trans        &kp COMMA     &kp PERIOD    &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                         &kp LG(LA(V))
             >;
         };
 
@@ -199,10 +227,10 @@
 
         num_ipad {
             bindings = <
-&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &kp LG(LEFT)    &kp UP    &kp LG(RIGHT)  &kp LS(LG(NUMBER_3))  &kp LG(X)
-&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN  &kp RIGHT      &kp LS(LG(NUMBER_4))  &kp LG(C)
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp CAPS      &kp LEFT_ARROW  &kp TAB   &kp RIGHT      &kp LS(LG(NUMBER_5))  &kp LG(V)
-&trans        &trans        &trans        &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                                 &kp LG(LA(V))
+&kp PLUS      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                &ipad_left      &kp UP    &ipad_right  &kp LS(LG(NUMBER_3))  &kp LG(X)
+&kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans        &kp LEFT        &kp DOWN  &kp RIGHT    &kp LS(LG(NUMBER_4))  &kp LG(C)
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp CAPS      &kp LEFT_ARROW  &kp TAB   &kp RIGHT    &kp LS(LG(NUMBER_5))  &kp LG(V)
+&trans        &kp COMMA     &kp PERIOD    &trans        &trans         &trans      &kp LEFT_WIN  &kp LEFT_SHIFT                                               &kp LG(LA(V))
             >;
         };
 
@@ -244,7 +272,7 @@
 &kp LS(SEMICOLON)  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(MINUS)                           &kp HOME          &kp UP    &kp END            &kp PRINTSCREEN  &kp RC(X)
 &kp MINUS          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PAGE_UP    &trans      &trans       &kp LEFT          &kp DOWN  &kp RIGHT          &kp LS(LG(S))    &kp RC(C)
 &kp NUMBER_0       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAGE_DOWN  &trans      &kp LG(TAB)  &kp LA(LG(LEFT))  &kp TAB   &kp LA(LG(RIGHT))  &kp LC(ESC)      &kp RC(V)
-&trans             &trans        &trans        &trans        &trans         &trans      &kp LCTRL    &kp LEFT_SHIFT                                                  &kp LG(V)
+&trans             &kp COMMA     &kp PERIOD    &trans        &trans         &trans      &kp LCTRL    &kp LEFT_SHIFT                                                  &kp LG(V)
             >;
         };
 
